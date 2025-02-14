@@ -1,61 +1,14 @@
 function Home() {
   return (
-    <div
-      className="
-          flex
-          justify-center
-          bg-indigo-900
-      "
-    >
-      <div
-        className="
-              container
-              grid
-              grid-cols-2
-              text-white
-          "
-      >
-        <div
-          className="
-                  flex
-                  flex-col
-                  items-center
-                  justify-center
-                  gap-4
-                  py-4
-              "
-        >
-          <h2
-            className="
-                      text-5xl
-                      max-sm:text-2xl
-                      font-bold
-                  "
-          >
-            Seja Bem-Vindo(a)!
-          </h2>
+    <div className="bg-blue-900 flex justify-center">
+      <div className="container grid grid-cols-2 text-white">
+        <div className="flex flex-col gap-4 items-center justify-center py-4">
+          <h2 className="text-5xl font-bold">Seja Bem-Vindo(a)!</h2>
           <p className="text-xl">Expresse aqui seus pensamentos e opiniões</p>
-
-          <div
-            className="
-                      flex
-                      justify-around
-                      gap-4
-                  "
-          >
-            <div
-              className="
-                          rounded
-                          border-white
-                          border-solid
-                          border-2
-                          py-2
-                          px-4
-                          text-white
-                      "
-            >
+          <div className="flex justify-around gap-4">
+            <button className="rounded text-white border-white border-2 py-2 px-4 shadow-xl shadow-blue-600/50 ">
               Nova Postagem
-            </div>
+            </button>
           </div>
         </div>
 
