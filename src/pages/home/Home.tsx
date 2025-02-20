@@ -1,5 +1,8 @@
+import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens";
+
 function Home() {
   return (
+    <>
     <div className="bg-blue-900 flex justify-center">
       <div className="container grid grid-cols-2 text-white">
         <div className="flex flex-col gap-4 items-center justify-center py-4">
@@ -21,7 +24,9 @@ function Home() {
         </div>
       </div>
     </div>
-  );
+<ListaPostagens />
+</>
+);
 }
 
 export default Home;
