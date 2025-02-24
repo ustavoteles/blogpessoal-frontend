@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+# Blog Pessoal - Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o front-end de um blog pessoal, construído com **React** e **Vite**. O projeto exibe posts de um blog e permite que os usuários visualizem os conteúdos de forma intuitiva e responsiva. A API do back-end está hospedada separadamente no Render, e o front-end se comunica com ela para obter os dados.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Front-End**: React, Vite, CSS
+- **Autenticação**: JWT (JSON Web Token) para login de usuários
+- **Documentação**: Swagger para documentação da API 
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Exibição de posts no blog
+- Página de login e cadastro de usuários
+- Responsividade para dispositivos móveis
 
-- Configure the top-level `parserOptions` property like this:
+## Como Rodar o Projeto Localmente
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Requisitos
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Node.js (versão recomendada: 16.x ou superior)
+- Yarn (opcional, pode ser substituído pelo NPM)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Passos
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone este repositório para sua máquina local:
+  ```bash
+   git clone https://github.com/ustavoteles/blogpessoal-frontend
+   cd blogpessoal-frontend
+  ```
+
+2. Instale as dependências:
+  ```bash
+   npm install
+  ```
+
+3. Execute o projeto
+  ```bash
+  npm run dev
+  ```
+
+4. Acesse o front-end no navegador em `http://localhost:5173`.
+
+## Integração com a API
+
+A API do blog pessoal está hospedada no Render. Você pode acessar a API através do seguinte endereço:
+
+- URL da API: https://blogpessoal-yzgy.onrender.com/
+
+Essa API fornece as informações dos posts do blog e gerencia autenticação de usuários.
+
+## Documentação da API
+
+A API está documentada com o Swagger. Para acessá-la, basta navegar até https://blogpessoal-yzgy.onrender.com/swagger para consultar os endpoints disponíveis.
+
+## Como Contribuir
+
+Se você deseja contribuir para o desenvolvimento deste projeto, siga as etapas abaixo:
+
+  1. Faça um fork deste repositório.
+  2. Crie uma branch com sua nova funcionalidade (git checkout -b minha-funcionalidade).
+  3. Commit suas mudanças (git commit -am 'Adiciona nova funcionalidade').
+  4. Push para a branch (git push origin minha-funcionalidade).
+  5. Abra um Pull Request.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para mais detalhes.
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão, entre em contato comigo através do meu e-mail: telesgutavo.dev@gmail.com
+
