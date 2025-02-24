@@ -24,7 +24,7 @@ function DeletarPostagem() {
         },
       });
     } catch (error: any) {
-      if (error.toString().includes("403")) {
+      if (error.toString().includes("401")) {
         handleLogout();
       }
     }
@@ -55,7 +55,7 @@ function DeletarPostagem() {
 
       alert("Postagem apagada com sucesso");
     } catch (error: any) {
-      if (error.toString().includes("403")) {
+      if (error.toString().includes("401")) {
         handleLogout();
       } else {
         alert("Erro ao deletar a postagem.");
@@ -85,14 +85,12 @@ function DeletarPostagem() {
         <div className="p-4">
           <p className="text-xl h-full">{postagem.titulo}</p>
           <p>{postagem.texto}</p>
-          <p>
-            <p className="mt-2">
-              Data da postagem:{" "}
-              {new Intl.DateTimeFormat(undefined, {
-                dateStyle: "medium",
-                timeStyle: "medium",
-              }).format(new Date(postagem.data))}
-            </p>
+          <p className="mt-2">
+            Data da postagem:{" "}
+            {new Intl.DateTimeFormat(undefined, {
+              dateStyle: "medium",
+              timeStyle: "medium",
+            }).format(new Date(postagem.data))}
           </p>
         </div>
         <div className="flex">
